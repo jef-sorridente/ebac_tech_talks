@@ -1,0 +1,41 @@
+@use "../config/colors"
+
+.event
+    display: flex
+    padding: 80px
+    gap: 40px
+
+    &--frontend
+        background-color: colors.$backgroundColor1
+
+    &--ui-ux
+        background-color: colors.$backgroundColor2
+
+    &--data-science
+        background-color: colors.$backgroundColor3
+
+    &--backend
+        background-color: colors.$backgroundColor4
+
+    &__image
+        width: 360px
+
+    &:nth-child(odd)
+        flex-direction: row-reverse
+
+    &__details
+
+        &__title
+            font-size: 18px
+            font-weight: bold
+            margin-bottom: 16px
+
+            &__description
+                line-height: 22px
+
+    @media (max-width: 640px)
+        padding: 20px
+        flex-direction: column
+
+        &__image
+            width: 100%
